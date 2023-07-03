@@ -2,7 +2,7 @@
   "compilerOptions": {
     "newLine": "lf",
     "target": "ES2021",
-    "module": "es2015",
+    "module": "CommonJS",
     "outDir": "lib",
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -14,9 +14,7 @@
     ]
   },
   "include": [
-    "src"
+    "srv"
   ],
-  "exclude": [
-    "commitlint.config.js"
-  ]
+  "exclude": []
 }
