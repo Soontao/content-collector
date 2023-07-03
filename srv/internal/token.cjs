@@ -15,6 +15,7 @@ function generate_token(
   const random_bytes = crypto.randomBytes(32);
   const hash_value = crypto
     .createHash("sha256")
+    .update(id)
     .update(date)
     .update(random_bytes)
     .digest();
@@ -40,6 +41,7 @@ function extract_token(token = "") {
     }
     const re_hash_value = crypto
       .createHash("sha256")
+      .update(id)
       .update(date)
       .update(random_bytes)
       .digest();

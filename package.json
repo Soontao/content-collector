@@ -1,11 +1,11 @@
 {
   "name": "content-collector",
   "version": "0.0.1",
-  "type": "module",
+  "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint srv/** --fix",
+    "lint": "npx eslint srv --ext cjs --fix",
     "release": "npx standard-version --no-verify && git push --follow-tags origin main",
     "coverage": "npm run test -- --coverage",
     "format": "npx prettier -w src"
