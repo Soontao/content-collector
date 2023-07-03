@@ -1,6 +1,6 @@
 {
   "testTimeout": 30000,
-  "collectCoverageFrom": ["src/**/*", "!**/node_modules/**"],
+  "collectCoverageFrom": ["srv/**/*", "!**/node_modules/**"],
   "transform": {},
   "testEnvironment": "node",
   "testRegex": "/test/.*\\.test\\.[c|m]?js$",
