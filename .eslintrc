@@ -2,8 +2,7 @@
   "root": false,
   "plugins": [],
   "parserOptions": {
-    "ecmaVersion": 13,
-    "sourceType": "module"
+    "ecmaVersion": 13
   },
   "extends": [
     "eslint:recommended",
