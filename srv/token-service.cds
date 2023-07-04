@@ -1,6 +1,6 @@
 using {Token} from '../db/model';
 
-
+@requires: 'authenticated-user'
 @protocol: 'rest'
 service TokenService {
 
