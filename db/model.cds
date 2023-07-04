@@ -12,15 +12,6 @@ type ContentFormat : String(10) enum {
   link;
 }
 
-entity Token : managed {
-  key ID     : Integer; // integer token, sequence
-      value  : String(200) not null;
-      expire : DateTime;
-
-      user   : Association to one LoginUser
-                 on user.login_name = createdBy;
-}
-
 entity Content : cuid, managed {
   link    : String(500);
   content : LargeString not null;

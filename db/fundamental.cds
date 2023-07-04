@@ -12,3 +12,12 @@ entity LoginUser : managed {
 entity Session : cuid {
   content : LargeString;
 }
+
+entity Token : managed {
+  key ID     : Integer; // integer token, sequence
+      value  : String(200) not null;
+      expire : DateTime;
+
+      user   : Association to one LoginUser
+                 on user.login_name = createdBy;
+}
