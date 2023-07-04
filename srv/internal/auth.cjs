@@ -35,7 +35,7 @@ module.exports = async function authentication(req, res, next) {
       res.status(401);
       return next(new Error("cannot find user"));
     }
-    req.user = new cds.User({ id: user.login_name });
+    req.user = new cds.User({ id: user.login_name }); // TODO: LoginUser to cds.User
   }
 
   if (req.user === undefined) {
