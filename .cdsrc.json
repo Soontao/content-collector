@@ -1,0 +1,10 @@
+{
+  "requires": {
+    "auth": {
+      "impl": "./srv/internal/auth.cjs"
+    }
+  },
+  "features": {
+    "rest_error_handler": true
+  }
+}
