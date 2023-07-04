@@ -18,13 +18,13 @@ describe("Token Test Suite", () => {
     const t = generate_token(1234, new Date("2000-01-01"));
     expect(t).toHaveLength(131);
     const r = extract_token(t);
-    expect(r).toBe(false);
+    expect(r.valid).toBe(false);
   });
 
   it("should support reject wrong token", () => {
     const wrong_tokens = ["..", "...", "", 123, "123.3213.2.32"];
     for (const token of wrong_tokens) {
-      expect(extract_token(token)).toBe(false);
+      expect(extract_token(token).valid).toBe(false);
     }
   });
 });

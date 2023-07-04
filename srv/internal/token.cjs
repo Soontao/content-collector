@@ -25,11 +25,11 @@ function generate_token(
 
 function extract_token(token = "") {
   if (typeof token !== "string") {
-    return false;
+    return { valid: false };
   }
   const parts = token.split(".");
   if (parts.length !== 4) {
-    return false;
+    return { valid: false };
   }
   try {
     const [id, date, random_bytes, hash_value] = parts.map((part) =>
@@ -37,7 +37,7 @@ function extract_token(token = "") {
     );
     const valid_to = new Date(date.toString("utf-8"));
     if (valid_to < Date.now()) {
-      return false;
+      return { valid: false };
     }
     const re_hash_value = crypto
       .createHash("sha256")
@@ -47,13 +47,18 @@ function extract_token(token = "") {
       .digest();
 
     if (!hash_value.equals(re_hash_value)) {
-      return false;
+      return { valid: false };
     }
 
-    return { id: parseFloat(id.toString("utf-8")), valid_to, random_bytes };
+    return {
+      id: parseFloat(id.toString("utf-8")),
+      valid_to,
+      random_bytes,
+      valid: true,
+    };
   } catch (error) {
     // TODO: logging
-    return false;
+    return { valid: false };
   }
 }
 

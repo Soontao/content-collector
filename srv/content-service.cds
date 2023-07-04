@@ -3,6 +3,7 @@ using {
   Tag
 } from '../db/model';
 
+@requires: 'authenticated-user'
 service ContentService {
 
   entity Contents as projection on Content;
