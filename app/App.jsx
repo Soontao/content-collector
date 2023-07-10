@@ -1,5 +1,7 @@
+import Home from "./pages/Home.jsx";
+
 export default class App extends React.Component {
   render() {
-    return <div>App</div>;
+    return <Home></Home>;
   }
 }

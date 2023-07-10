@@ -1,0 +1,13 @@
+.horizontal-menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.horizontal-menu li {
+  margin-right: 10px;
+}
+
+.horizontal-menu li.active {
+  font-weight: bold;
+}
