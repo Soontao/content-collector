@@ -2,16 +2,23 @@
   "root": false,
   "plugins": [],
   "parserOptions": {
-    "ecmaVersion": 13
+    "ecmaVersion": 13,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "extends": [
     "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:@sap/cds/recommended"
   ],
   "env": {
     "node": true,
     "es6": true,
-    "jest": true
+    "jest": true,
+    "commonjs": true,
+    "browser": true
   },
   "rules": {
     "semi": [
