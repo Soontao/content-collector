@@ -20,6 +20,9 @@
     "commonjs": true,
     "browser": true
   },
+  "globals": {
+    "React": true
+  },
   "rules": {
     "semi": [
       2
@@ -29,6 +32,7 @@
     ],
     "no-var": [
       2
-    ]
+    ],
+    "react/react-in-jsx-scope": "off"
   }
 }

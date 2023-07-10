@@ -14,7 +14,6 @@ function file_exist(file) {
  * @param {{path: string}} options
  */
 function jsx_transform(options) {
-  const cache = new Map();
   /**
    * @type {import("express").Handler}
    */
