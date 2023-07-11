@@ -1,33 +1,36 @@
+import React from "react";
 import MenuItem from "./MenuItem.jsx";
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeItem: "",
+      activeItem: props.items[0].id ?? "",
     };
   }
 
-  handleItemClick = (item) => {
+  _handleItemClick = (item) => {
     this.setState({ activeItem: item });
   };
 
-  render() {
+  _renderItems() {
     const { activeItem } = this.state;
-    const { items } = this.props;
 
+    const { items } = this.props;
+    return items.map((item) => (
+      <MenuItem
+        key={item.id}
+        label={item.label}
+        active={item.id === activeItem}
+        onItemClick={() => this._handleItemClick(item.id)}
+      />
+    ));
+  }
+
+  render() {
     return (
       <div className="menu">
-        <ul className="horizontal-menu">
-          {items.map((item) => (
-            <MenuItem
-              key={item.id}
-              label={item.label}
-              active={item.id === activeItem}
-              onItemClick={() => this.handleItemClick(item.id)}
-            />
-          ))}
-        </ul>
+        <ul className="horizontal-menu">{this._renderItems()}</ul>
       </div>
     );
   }

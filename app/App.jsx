@@ -1,7 +1,8 @@
-import Home from "./pages/Home.jsx";
+import React, { Component } from "react";
+import Router from "./pages/Router.jsx";
 
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
-    return <Home></Home>;
+    return <Router></Router>;
   }
 }
