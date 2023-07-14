@@ -1,10 +1,11 @@
 import React from "react";
 import Menu from "../components/Menu.jsx";
+import Home from "./Home.jsx";
 
 class Router extends React.Component {
   render() {
     const menuItems = [
-      { id: "home", label: "Home" },
+      { id: "home", label: "Home", content: () => <Home></Home> },
       { id: "about", label: "About" },
       { id: "services", label: "Services" },
       { id: "contact", label: "Contact" },
@@ -12,7 +13,6 @@ class Router extends React.Component {
 
     return (
       <div>
-        <h1>My App</h1>
         <Menu items={menuItems} />
       </div>
     );

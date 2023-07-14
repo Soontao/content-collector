@@ -27,10 +27,23 @@ class Menu extends React.Component {
     ));
   }
 
+  _renderActiveContent() {
+    const { activeItem } = this.state;
+    const { items } = this.props;
+    const activeItemObj = items.find((item) => item.id === activeItem);
+    if (activeItemObj && typeof activeItemObj.content === "function") {
+      return activeItemObj.content();
+    }
+    return <div></div>;
+  }
+
   render() {
     return (
-      <div className="menu">
-        <ul className="horizontal-menu">{this._renderItems()}</ul>
+      <div>
+        <div className="menu">
+          <ul className="horizontal-menu">{this._renderItems()}</ul>
+        </div>
+        <div>{this._renderActiveContent()}</div>
       </div>
     );
   }
