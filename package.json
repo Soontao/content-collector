@@ -30,7 +30,7 @@
   "dependencies": {
     "@babel/core": "^7.22.8",
     "@babel/preset-react": "^7.22.5",
-    "@cap-js/sqlite": "^1.0.0",
+    "@cap-js/sqlite": "^2.0.0",
     "@sap/cds": "^8.0.0",
     "axios": "^1.4.0",
     "express": "^4.18.2",
