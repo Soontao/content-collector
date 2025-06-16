@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@sap/eslint-plugin-cds": "^2.6.3",
-    "@types/jest": "^29.5.2",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.0.0",
     "eslint": "^8.44.0",
     "eslint-plugin-react": "^7.32.2",
