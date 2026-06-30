@@ -28,8 +28,8 @@
     "prettier": "^3.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.22.8",
-    "@babel/preset-react": "^7.22.5",
+    "@babel/core": "^8.0.0",
+    "@babel/preset-react": "^8.0.0",
     "@cap-js/sqlite": "^1.0.0",
     "@sap/cds": "^8.0.0",
     "axios": "^1.4.0",
